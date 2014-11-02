@@ -23,7 +23,8 @@ The Disjoint Set ADT
 ##8-7
 Write a program to implement the algorithm in Section 8.7.
 
-** What's in Section 8.7 **
+**What's in Section 8.7**
+
 We have a network of computers and a list of bi-directional
 connections. Each of these connections allows a file transfer from one
 computer to another. Is it possible to send a file from any computer
@@ -51,10 +52,7 @@ There are `k` components. where `k` is the number of connected components
 in this network. Print a blank line between test cases.
 
 Sample Input:
-<<<<<<< HEAD
 
-=======
->>>>>>> 50b82cce48f1e0d9d825f0bd563aa0b29fd40966
     3
     C 1 2 
     I 1 2 
@@ -68,10 +66,7 @@ Sample Input:
     S
 
 Sample Output:
-<<<<<<< HEAD
 
-=======
->>>>>>> 50b82cce48f1e0d9d825f0bd563aa0b29fd40966
     no 
     yes 
     There are 2 components. 
