@@ -51,7 +51,10 @@ There are `k` components. where `k` is the number of connected components
 in this network. Print a blank line between test cases.
 
 Sample Input:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 50b82cce48f1e0d9d825f0bd563aa0b29fd40966
     3
     C 1 2 
     I 1 2 
@@ -65,7 +68,10 @@ Sample Input:
     S
 
 Sample Output:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 50b82cce48f1e0d9d825f0bd563aa0b29fd40966
     no 
     yes 
     There are 2 components. 
