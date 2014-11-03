@@ -15,5 +15,4 @@ void topological_sort(Graph G){
   Stack S;
 
   // initialize: push all vertices with in degree 0 into the stack
-S = 
 }
