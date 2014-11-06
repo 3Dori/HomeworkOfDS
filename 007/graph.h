@@ -174,11 +174,11 @@ void topological_sort(Graph G){
   }
 
   if (counter != G->vertices_num)
-    printf("Graph has a cycle!");
+    printf("Graph has a cycle! ");
   else
     for (int i = 0; i < G->vertices_num; i++)
       printf("%d ", result[i]);
-  putchar('\n');
+  putchar('\b');
 
   free(in_degree);
   free(result);
