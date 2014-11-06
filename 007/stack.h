@@ -1,4 +1,4 @@
-#define STACK_MIN_SIZE 5
+#define STACK_MIN_SIZE 1
 #define EMPTY_STACK -1
 
 typedef struct stack_record *Stack;
@@ -7,6 +7,12 @@ struct stack_record{
   int stack_top;
   stack_elem_t *elements;
 };
+
+Stack create_stack(int size);
+void dispose_stack(Stack S);
+void push(stack_elem_t element, Stack S);
+int is_full(Stack S);
+int is_empty(Stack S);
 
 Stack create_stack(int size){
   Stack S;
@@ -21,7 +27,7 @@ Stack create_stack(int size){
     exit(1);
   }
   S->capacity = size;
-  S->elements = (elements *)malloc(sizeof(stack_elem_t) * size);
+  S->elements = (stack_elem_t *)malloc(sizeof(stack_elem_t) * size);
   if (S->elements == NULL){
     printf("Out of space while creating the stack array\n");
     exit(1);
@@ -43,15 +49,19 @@ void push(stack_elem_t element, Stack S){
     printf("Push to a full stack\n");
     exit(1);
   }
-  S->elements[++stack_top] = element;
+  S->elements[++S->stack_top] = element;
 }
 
-void pop(Stack S){
+stack_elem_t pop(Stack S){
+  stack_elem_t element;
+
   if (is_empty(S)){
     printf("Pop from an empty stack\n");
     exit(1);
   }
-  S->stack_top--;
+  element = S->elements[S->stack_top--];
+
+  return element;
 }
 
 stack_elem_t top(Stack S){
