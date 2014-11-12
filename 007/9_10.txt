@@ -1,0 +1,7 @@
+9-10
+
+a. 
+An extra attribute count is added to the table. It represents the number of minimum paths to a vertex. All vertices has an initial count value 0. The start vertex of Dijkstra algorithm has count value 1. When there’s a new minimum path, the vertex’s count is added by the count value of its previous vertex in the path. It is implemented in 9_10_a.h.
+
+b. 
+An extra attribute edge_num is added to the table. It represents the number of edges in the shortest path. All vertices has an initial edge_num value 0. When a new path is find, the vertex’s edge_num is updated to (1 + edge_num of its previous in the path). It is implemented in 9_10_b.h.
