@@ -63,20 +63,32 @@ void connect_to(Graph G, int from, int to, int weight){
   from_L->next = L;
 }
 
+Info *create_table(int size){
+  Info *table;
+
+  table = (Info *)malloc(sizeof(Info) * (size + 1));
+  for (int i = 1; i <= size; i++){
+    table[i].known = FALSE;
+    table[i].dist = INF;
+    table[i].path = NOT_A_VERTEX;
+  }
+
+  return table;
+}
+
+void dispose_table(Info *table){
+  if (table != NULL)
+    free(table);
+}
+
 Info *dijkstra(Graph G, int from){
   List adjacent;
   Info *table;
   int has_unknown;
   int smallest_unknown, smallest_dist;
 
-  // create a table
-  table = (Info *)malloc(sizeof(Info) * (G->vertex_num + 1));
-  for (int i = 1; i <= G->vertex_num; i++){
-    table[i].known = FALSE;
-    table[i].dist = INF;
-    table[i].path = NOT_A_VERTEX;
-  }
-  // initialize
+  table = create_table(G->vertex_num);
+
   table[from].dist = 0;
   for (;;){
     smallest_dist = INF;
@@ -113,9 +125,4 @@ void print_path(Info *table, int to){
   }
   print_path(table, table[to].path);
   printf(" -> %d", to);
-}
-
-void dispose_table(Info *table){
-  if (table != NULL)
-    free(table);
 }
