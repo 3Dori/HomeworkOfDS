@@ -89,7 +89,7 @@ void connect( set S, elem_type x1, elem_type x2 ){
       S[ root1 ] += S[ root2 ]; // increase the size
       S[ root2 ] = root1;
     }
-    else{    
+    else{
       S[ root2 ] += S[ root1 ];
       S[ root1 ] = root2;
     }

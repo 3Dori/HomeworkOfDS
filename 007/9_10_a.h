@@ -9,7 +9,8 @@ struct list_record{
   List next;
 };
 
-typedef struct{
+typedef struct info_record Info;
+struct info_record{
   int known;
   int dist;
   int path;

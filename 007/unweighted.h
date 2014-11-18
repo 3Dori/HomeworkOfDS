@@ -18,7 +18,8 @@ struct queue_record{
   int *elements;
 };
 
-typedef struct{
+typedef struct info_record Info;
+struct info_record{
   int known;
   int dist;
   int path;

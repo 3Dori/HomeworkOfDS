@@ -9,11 +9,12 @@ struct list_record{
   List next;
 };
 
-typedef struct{
+typedef struct info_recort Info;
+struct info_record{
   int known;
   int dist;
   int path;
-} Info;
+};
 
 typedef struct graph_record *Graph;
 struct graph_record{

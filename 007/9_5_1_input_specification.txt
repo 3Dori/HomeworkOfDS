@@ -1,7 +1,0 @@
-inputs:
-vertex_number connection_number
-
-(connection_number lines)
-from to weight
-
-dijkstra_from_vertex
